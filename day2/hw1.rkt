@@ -35,7 +35,8 @@
 ;;  		[else (* n (fact (- n 1)))]))
 
 (display (fact 1)) (newline) ;; -> 1
-(display (fact 2)) (newline) ;; -> 1
+(display (fact 2)) (newline) ;; -> 2
+(display (fact 3)) (newline) ;; -> 6
 
 ;; 4.  WRITE FIBONACCI:  given n, returns the nth fibonacci number as shown below
 ;;     Hint:  don't run this on really big numbers!

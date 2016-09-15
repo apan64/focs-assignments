@@ -44,7 +44,12 @@
 
 ;;; 4. Add boolean operations ANND, ORR, NOTT
 
+<<<<<<< HEAD
 (calculate '(ANDD (GT (ADD 3 4) (MUL 5 6)) (LE (ADD 3 (MUL 4 5)) (SUB 0 (SUB (ADD 3 4) (MUL 5 6)))))) ;; --> #f
+=======
+(calculate '(ANND (GT (ADD 3 4) (MUL 5 6)) (LE (ADD 3 (MUL 4 5)) (SUB 0 (SUB (ADD 3 4) (MUL 5 6)))))) ;; --> #f
+(calculate '(NOTT (ANND (GT (ADD 3 4) (MUL 5 6)) (LE (ADD 3 (MUL 4 5)) (SUB 0 (SUB (ADD 3 4) (MUL 5 6))))))) ;; --> #t
+>>>>>>> 57dba957e7d9e8a93ae37001b2768555208e796e
 
 ;;; 5. Add IPH
 
