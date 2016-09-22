@@ -1,0 +1,2 @@
+A machine that could accept strings over the English alphabet would be more powerful in the sense that it be capable of performing more functions than the machine with a language of only {0, 1}, but would also be significantly more complex because each state in the machine would be capable of 26 transitions.  
+For the alphabet {a, b, c, d}, each state would have 4 transitions, leading to n^4 unique transition sets where n is the number of nodes, which is exponentially greater than the n^2 unique transition sets for {0, 1}
