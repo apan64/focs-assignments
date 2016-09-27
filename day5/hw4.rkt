@@ -1,6 +1,6 @@
 #lang racket
 
-;;; Andrew Pan
+;;; Student Name: Andrew Pan
 ;;;
 ;;; Check one:
 ;;; [ ] I completed this assignment without assistance or esexprternal resources.

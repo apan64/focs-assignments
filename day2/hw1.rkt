@@ -4,7 +4,7 @@
 ;;;
 ;;; Check one:
 ;;; [ ] I completed this assignment without assistance or external resources.
-;;; [ ] I completed this assignment with assistance from ___
+;;; [x] I completed this assignment with assistance from Sophie
 ;;;     and/or using these external resources: ___
 
 ;;     NOTE:  You need not worry about error checking in the programs below.
