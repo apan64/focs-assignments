@@ -1,0 +1,23 @@
+Student Name: Andrew Pan
+Check one:
+[x] I completed this assignment without assistance or external resources.
+[ ] I completed this assignment with assistance from ___
+   and/or using these external resources: ___
+
+1.	a. For the string a, the only possible substring is also a, and pumping a three times yields aaa which does not satisfy the language with length of a power of 2.
+	b. The language is regular.  The finite automaton for this language is in 1-b.jff
+	c. The language is regular because for any given w, the last character of w will be the first character of w^R.  As the language consists of strings ww^R, the middle of any string in the language will have the same two characters (the last character in w).  Those middle two characters can then be selected and pumped for any string, effectively adding a repeat of the last character to w and a repeat of the first character to w^R in the string ww^R, so that the string still belongs to the language.  Thus for all strings in the language ww^R, there exists a substring y that can be pumped any number of times and the new string will still belong to the language ww^R.
+		I could not write an NFA for this problem that could accept a string of an arbitrary length, only for strings of a given length.
+
+
+2.	Problem 2 of the pumping game:
+		I chose a12b12
+		The computer chose the substring a
+		My successfully pumped string was aaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbb
+
+	Problem 4 of the pumping gameL
+		I chose a15b12a27
+		The computer chose the substring aaaa
+		My successfully pumped string was aaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+3.	The PDA for the language of problem 2 of the pumping game is in 3.jff
