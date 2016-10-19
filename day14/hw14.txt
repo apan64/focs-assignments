@@ -19,13 +19,13 @@ For each of the following pairs of functions, identify a multiplier and a minimu
 
 
   A. 367n+1098     and     2n                  [n0 = 40; k=200]
-  B. n^2 + 2n + 6    and     6n^2 - 25
-  C. n^3 + n^2 - 2n     and     6n^2 - 25
-  D. 869,438    and    923
-  E. 2^n    and    3^n
-  F. 3^n    and    2^n
-  G. log_2 n     and    log_10 n    [NB:  these are intended to be log-base-2 of n and log-base-10 of n]
-  H. log_10 n^2    and     log_2 n
+  B. n^2 + 2n + 6    and     6n^2 - 25			[n0 = 3; k = 100]
+  C. n^3 + n^2 - 2n     and     6n^2 - 25		There are no multiplier and minimum values for these functions because the first one has an n^3 term while the second only has an n^2 term, meaning that the growth of the first function will be greater by an exponent than the second funciton.
+  D. 869,438    and    923						[n0 = 0; k = 942]
+  E. 2^n    and    3^n 							[n0 = 0; k = 1]
+  F. 3^n    and    2^n 							There are no multiplier and minumum values because the first function has a higher exponential growth rate since its base number (being raised by n) is greater.  There is a maximum value for n that makes 2^n > 3^n for values below 0.
+  G. log_2 n     and    log_10 n    [NB:  these are intended to be log-base-2 of n and log-base-10 of n] [n0 = 1, k = 4]
+  H. log_10 n^2    and     log_2 n 				[n0 = 1, k = 4]
 
 
 II. Linear data structures
@@ -34,17 +34,19 @@ For the following problem, assume that it costs 1 unit to access a structure -- 
 
 Assume that you have n elements stored in an array and the same n elements stored in a linked list; you have no other references to these data structures.  You may assume that n > 10.  How much does it cost to perform each of the following actions?
 
-  A. Read the value of the first element in the array?  In the list?
-  B. Read the value of the seventh element in the array?  In the list?
-  C. Add an element to the array?  [Where is the cheapest place to add it?]  To the list?  [Where is the cheapest place to add it?]
-  D. Delete the fifth element from the array?  From the list?
-  E. Confirm that a particular element -- say x -- is present in the array?  In the list?
-  F. Confirm that a particular element -- say y -- is NOT present in the array?  In the list?
+  A. Read the value of the first element in the array?  In the list?		1, 1
+  B. Read the value of the seventh element in the array?  In the list?		1, 7
+  C. Add an element to the array?  [Where is the cheapest place to add it?]  To the list?  [Where is the cheapest place to add it?]		n + 1 (new array has to be made and copy values from old one), k + 2 where k is the position to insert element (list has to iterate to find the position, then add it by changing pointers)
+  D. Delete the fifth element from the array?  From the list?		n - 1 (new array without the element), k + 1 (iterate to position, change pointer to element to the unit after the element)
+  E. Confirm that a particular element -- say x -- is present in the array?  In the list?		n, n
+  F. Confirm that a particular element -- say y -- is NOT present in the array?  In the list?		n, n
 
 Now assume that you can maintain one extra piece of storage for the data structure.  In the case of the array, you may want to maintain a length reference.
 In the case of the linked list, what would be similarly helpful?
-G. How much would it cost now to add an element to the end of the array?  To add an element to the end of the list?
-H. How much would it cost now to delete an element from the array?  From the list?  What if it were the final element?  The penultimate element?
+G. How much would it cost now to add an element to the end of the array?  To add an element to the end of the list?		1, 1
+H. How much would it cost now to delete an element from the array?  From the list?  What if it were the final element?  The penultimate element?	n, k+1; 1, 1; 2 (write second to last element, remove last), 1	
 
 Finally, assume that both the array and the linked list are sorted, i.e., that their elements are in some predictable order (say, comparable by < or <=).
   J. How much would it cost to confirm that a particular element -- say x -- is present in the array?  In the list?  To confirm that a particular element -- say y -- is not present in the array?  In the list?
+log_2(n), n
+log_2(n), n
