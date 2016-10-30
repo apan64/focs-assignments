@@ -23,22 +23,40 @@ class Graph(object):
     def add_edge(self, edge):
         raise NotImplementedError()
 
+class spanningTreeNode():
+    def __init__(self, val, parent, distance):
+        self.val = val
+        self.parent = parent
+        self.distance = 0
 
-def bfs(graph, start):
+def bfs(graph, start): # returns the spanning tree as a list of tree nodes, each with a parent attribute.  The first node in the list is the root.
     remaining_nodes = Queue()
     visited = set()
+    spanningTree = []
 
-    def visit(node):
+    def visit(node, parent, distance):
         print(node)
         visited.add(node)
+        spanningTree.append(spanningTreeNode(node, parent, distance))
         for tail in graph.successors(node):
             if tail not in visited:
-                remaining_nodes.put(tail)
+                remaining_nodes.put((tail, node, distance + 1))
 
-    remaining_nodes.put(start)
+
+    remaining_nodes.put((start, None, 0))
     while not remaining_nodes.empty():
-        n = remaining_nodes.get()
-        visit(n)
+        n, parent, distance = remaining_nodes.get()
+        visit(n, parent, distance)
+    return spanningTree
 
 g = Graph(['a', 'b', 'c', 'd', 'e'], [('a', 'b'), ('a', 'c'), ('b', 'd'), ('b', 'e'), ('e', 'a')])
 bfs(g, 'a')
+
+# 3. Djikstra's algorithm labels the nodes as:
+# a:0
+# b:10
+# c:5
+# d:13
+# e:15
+# f:17
+# g:21
